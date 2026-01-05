@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Blurred Mountain Background -->
+    <div class="background-container">
+        <div class="mountain-range"></div>
+        <div class="mountain-range range-2"></div>
+        <div class="mountain-range range-3"></div>
+        <div class="fog-overlay"></div>
+    </div>
+    
+    <div class="container">
+        <div class="weather-card">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="app-title">🌤️ Weather App</h1>
+                <p class="app-subtitle">Real-time weather forecasts</p>
+            </div>
+
+            <!-- Search Section -->
+            <div class="search-section">
+                <div class="search-container">
+                    <input type="text" id="city-input" placeholder="Search city...">
+                    <button id="search-btn" class="search-button">
+                        <span class="search-icon">🔍</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Weather Info -->
+            <div class="weather-info">
+                <div class="location-time">
+                    <h2 id="city-name">New Delhi</h2>
+                    <p id="date">Loading date...</p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature-section">
+                        <div class="temp-display">
+                            <span id="temp">25</span>
+                            <sup>°C</sup>
+                        </div>
+                        <div class="weather-icon">
+                            <img id="weather-img" src="" alt="Weather" class="weather-image">
+                        </div>
+                    </div>
+
+                    <div class="weather-description">
+                        <p id="description">Clear sky</p>
+                    </div>
+                </div>
+
+                <!-- Weather Details -->
+                <div class="weather-details">
+                    <div class="detail-card">
+                        <div class="detail-icon">💧</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Humidity</span>
+                            <span id="humidity" class="detail-value">60%</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <div class="detail-icon">💨</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Wind Speed</span>
+                            <span id="wind" class="detail-value">5 km/h</span>
+                        </div>
+                    </div>
+                    
+                    <div class="detail-card">
+                        <div class="detail-icon">📊</div>
+                        <div class="detail-info">
+                            <span class="detail-label">Pressure</span>
+                            <span id="pressure" class="detail-value">1013 hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Loading Animation -->
+            <div class="loading-overlay hidden">
+                <div class="mountain-loader">
+                    <div class="mountain-peak"></div>
+                    <div class="mountain-base"></div>
+                </div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <!-- Error Message -->
+            <div class="error-overlay hidden" id="error-message">
+                <div class="error-icon">⚠️</div>
+                <p class="error-text">City not found. Please try again.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
